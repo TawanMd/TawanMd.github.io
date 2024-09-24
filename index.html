@@ -1,46 +1,244 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Thauan Matheus</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #4CAF50; color: white; text-align: center; padding: 1em; }
-        section { margin: 20px; }
-        footer { text-align: center; padding: 10px; background-color: #f1f1f1; }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Portfólio de Thauan Matheus</h1>
-        <nav>
-            <a href="#sobre">Sobre Mim</a> |
-            <a href="#projetos">Projetos</a> |
-            <a href="#contato">Contato</a>
-        </nav>
+<html lang="pt-BR">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>TawanMd Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/extends.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar__content max-width mb-0">
+        <a href="/">
+          <img src="assets/logo.png" width="125" />
+        </a>
+        <ul class="navbar__links">
+          <li><a href="#header">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#footer">Contato</a></li>
+        </ul>
+        <div class="navbar__mobile">
+          <img src="assets/menu.svg" alt="menu" class="burguer" />
+          <ul class="mobile__links">
+            <li><a href="#header">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#footer">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header id="header" class="max-width">
+      <div class="header__left">
+        <h1>Olá! Sou Thauan Matheus profissional de TI Bilíngue (Inglês e Português) com 3 anos de experiência!</h1>
+        <p>
+          Durante meus 3 anos de experiência atuei na área de suporte desempenhando papeis cruciais para a execelência no atedimento ao cliente.
+          Atualmente estou buscando vagas de emprego na área de tecnologia e estou me formando no ano de 2025 na faculdade de Análise e Desenvolvimento de Sistemas.
+          Estou sempre aprimorando minhas Skills e Tecnologias pois quero me tornar um Analista de Dados Usando Python e outras Tecnologias como SQL, Excel e PowerBI.
+          Estou cursando também os curso CS50P, CS50SQL E CS50X de Harvard com previsão de término para o ano de 2025
+        </p>
+        <a href="#about" class="btn btn-primary">Saiba Mais!</a>
+      </div>
+      <div class="header__right">
+        <div class="header__image">
+          <img src="assets/thauan.png" width="500" />
+          <img src="assets/abstract.svg" alt="background" class="background" />
+        </div>
+      </div>
     </header>
 
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Sou um analista de suporte e desenvolvedor em busca de novos desafios. Tenho experiência com Azure, PowerBI e desenvolvimento de soluções web.</p>
-    </section>
-
-    <section id="projetos">
-        <h2>Projetos</h2>
+    <!-- Sobre -->
+    <section id="about" class="about max-width">
+      <div class="about__left">
+        <h2 class="secondary-title">Quem sou eu?</h2>
+        <p>
+          Que tal se conectar comigo nas redes sociais abaixo e saber mais sobre
+          meu trabalho vamos nos conectar no Linkedin para conversarmos melhor!
+        </p>
         <ul>
-            <li><a href="https://github.com/seu-projeto">Projeto 1</a> - Descrição do projeto.</li>
-            <li><a href="https://github.com/seu-projeto">Projeto 2</a> - Descrição do projeto.</li>
+          <li>
+            <a href="#"><img src="assets/instagram.svg" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/linkedin.svg" alt="Linkedin" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/facebook.svg" alt="Facebook" /></a>
+          </li>
         </ul>
+      </div>
+      <div class="about__right">
+        <h3 class="tertiary-title mb-m">
+          Profissional de TI apaixonado por tecnologia e Python..
+        </h3>
+        <p>
+          Olá, eu sou Thauan Matheus, um profissional de TI apaixonado por
+          tecnologia e soluções criativas. Com mais de 3 anos de experiência na área,
+          tenho trabalhado com diversas tecnologias e
+          plataformas para criar soluções confiáveis que atendam às
+          necessidades dos clientes.
+        </p>
+        <p>
+          Eu amo o desafio de encontrar soluções inovadoras e criativas para
+          problemas complexos e estou sempre buscando aprender e crescer como
+          profissional.
+        </p>
+      </div>
     </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:seuemail@gmail.com">thauan.matheus40@gmail.com</a></p>
+    <!-- habilidades -->
+    <section id="skills" class="skills">
+      <div class="skills__content max-width">
+        <h2 class="tertiary-title">Minhas tecnologias</h2>
+        <p class="description">
+          Descubra as habilidades e ferramentas que domino e que me permitem
+          criar soluções criativas e funcionais para meus clientes.
+        </p>
+        <ul>
+          <li class="skills__item">
+            <div class="image-container">
+              <img src="assets/notebook.png" alt="CS50P" />
+            </div>
+            <h3>Habilidade em Código</h3>
+            <p>
+              Curso de harvard de Python em andamento, término previsto para 2025!
+              O curso está refornçando meus fundamentos em python, JS, HTML e CSS, SQL e outras tecnologias!
+            </p>
+          </li>
+          <li class="skills__item">
+            <div class="image-container">
+              <img src="assets/analisando.png" alt="Análise de dados" />
+            </div>
+            <h3>Análise de dados</h3> 
+            <p>
+              Habilidade em análise de dados usando Excel, PowerBI para visualização, biblioteca Pandas de Python
+              e também SQL Server para gerenciamente de banco de dados e tratamento de dados.
+            </p>
+          </li>
+          <li class="skills__item">
+            <div class="image-container">
+              <img src="assets/phone.png" alt="Suporte" />
+            </div>
+            <h3>Suporte a usuários</h3>
+            <p>
+              Meus conhecimentos, experiência e cursos me tornaram um excenlente resolvedor de problemas.
+              Amo resolver problemas de clientes e usuários e sentir que fiz a diferença no momento de vida deles.
+            </p>
+          </li>
+          <li class="skills__item">
+            <div class="image-container">
+              <img src="assets/files.png" alt="Gerenciamentos de versões" />
+            </div>
+            <h3>Gerenciamentos de versões</h3>
+            <p>
+              Experiência em ferramentas de gerenciamento de versão para
+              controle de projetos como github actions e Azure Devops para versionamento de Código!
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Thauan Matheus</p>
+    <!-- Projetos -->
+    <section id="projects" class="projects max-width">
+      <div class="projects__content">
+        <h2 class="secondary-title">Projetos em Destaque</h2>
+        <p>
+          De ideias abstratas a projetos bem feitos, aqui estão alguns dos
+          meus trabalhos mais recentes!
+        </p>
+      </div>
+      <ul>
+        <li>
+          <div class="image">
+            <img src="assets/projeto_lp.png" alt="Landing Page" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Landing Page de Portfolio usando GitHub Pages
+            </h3>
+            <p>
+              Esta landing page que você está lendo agora. Para desenvolve-la, utilizei de Javascript, HTML e CSS para desenvolver um site responsivo e moderno!
+            </p>
+            <a href="https://github.com/TawanMd/TawanMd.github.io">Saiba mais sobre a LP aqui! &rarr;</a>
+          </div>
+        </li>
+        <li class="projects__reversed-list">
+          <div class="image">
+            <img src="assets/image.png" alt="ecommerce" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Em andamento...
+            </h3>
+            <p>
+              Em andamento...
+            </p>
+            <a href="#">Em construção (em breve) &rarr;</a>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="assets/image.png" alt="delivery" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Em andamento...
+            </h3>
+            <p>
+              Em andamento...
+            </p>
+            <a href="#">Em construção (em breve) &rarr;</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer__content max-width mb-0">
+        <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
+        <p class="mb-m">
+          Ficarei feliz em saber mais sobre seu projeto e como posso ser uma peça valiosa para o seu time!
+        </p>
+        <div class="footer__contact mb-m">
+          <span class="mb-m">thauan.matheus40@gmail.com</span>
+          <span>48 98801-5140</span>
+        </div>
+        <ul class="mb-l">
+          <li>
+            <a href="#"><img src="assets/instagram.svg" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/linkedin.svg" alt="Linkedin" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/facebook.svg" alt="Facebook" /></a>
+          </li>
+        </ul>
+        <p class="footer__copyright">
+          © 2024 TawanMd. Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
-</body>
+    <!-- script -->
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
