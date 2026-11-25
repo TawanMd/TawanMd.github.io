@@ -1,256 +1,429 @@
 <!DOCTYPE html>
-<!-- script -->
-<script src="scripts/index.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/66f580e2e5982d6c7bb51055/1i8nfutba';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script--> 
-<html lang="pt-BR">
-  <head>
-    <!-- Meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>TawanMd Portfolio</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/extends.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav class="navbar">
-      <div class="navbar__content max-width mb-0">
-        <a href="/">
-          <img src="assets/logo.png" width="125" />
-        </a>
-        <ul class="navbar__links">
-          <li><a href="#header">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#footer">Contato</a></li>
-        </ul>
-        <div class="navbar__mobile">
-          <img src="assets/menu.svg" alt="menu" class="burguer" />
-          <ul class="mobile__links">
-            <li><a href="#header">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#footer">Contato</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thauan Matheus | Desenvolvedor Backend · Integrações &amp; Open Finance</title>
+  <meta name="description" content="Portfólio de Thauan Matheus Martins Dutra — Desenvolvedor Backend com foco em Integrações, Open Finance, Python, Node.js, PostgreSQL e IA aplicada à automação contábil." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thauan Matheus | Backend, Integrações &amp; Open Finance" />
+  <meta property="og:description" content="5+ anos em tecnologia, construindo automações, integrações via API e protótipos de dados em fintech contábil." />
+  <meta property="og:url" content="https://tawanmd.github.io/" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
 
-    <!-- header -->
-    <header id="header" class="max-width">
-      <div class="header__left">
-        <h1>Profssional de T.I Bilíngue (Inglês e Português) com 3 anos de experiência!</h1>
-        <p>
-          Com 3 anos de experiência na área de suporte, desempenhei papéis essenciais para garantir a excelência no atendimento ao cliente. Atualmente, busco oportunidades no setor de tecnologia, com formação prevista para 2025 em Análise e Desenvolvimento de Sistemas.
-          Estou constantemente aprimorando minhas habilidades e conhecimentos, com o objetivo de me tornar Analista de Dados, utilizando Python, SQL, Excel e PowerBI. 
-          Além disso, estou cursando os programas CS50P, CS50SQL e CS50X de Harvard, com conclusão prevista para 2025
-        </p>
-        <a href="#about" class="btn btn-primary">Saiba Mais!</a>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">TM</span>
+        <span class="brand-text">thauan<span class="brand-dot">.</span>dev</span>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sobre" data-section="sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a class="nav-link" href="#projetos" data-section="projetos" data-i18n="nav.projects">Projetos</a></li>
+          <li><a class="nav-link" href="#stack" data-section="stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a class="nav-link" href="#trajetoria" data-section="trajetoria" data-i18n="nav.journey">Trajetória</a></li>
+          <li><a class="nav-link" href="#contato" data-section="contato" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="cmd-trigger" class="control-btn cmd-trigger" aria-label="Abrir paleta de comandos">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <kbd class="kbd-hint">Ctrl K</kbd>
+        </button>
+        <button type="button" id="lang-toggle" class="control-btn" aria-label="Alternar idioma">
+          <span id="lang-label">PT</span>
+        </button>
+        <button type="button" id="theme-toggle" class="control-btn" aria-label="Alternar tema">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <span id="theme-label">Dark</span>
+        </button>
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
-      <div class="header__right">
-        <div class="header__image">
-          <img src="assets/thauan.png" width="500" />
-          <img src="assets/abstract.svg" alt="background" class="background" />
+    </div>
+  </header>
+
+  <div id="mobile-drawer" class="mobile-drawer" aria-label="Menu mobile">
+    <ul>
+      <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+      <li><a href="#trajetoria" data-i18n="nav.journey">Trajetória</a></li>
+      <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-ambient hero-ambient-a" aria-hidden="true"></div>
+      <div class="hero-ambient hero-ambient-b" aria-hidden="true"></div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-layout">
+          <div class="reveal reveal-left is-visible">
+            <div class="status-pill">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.badge">Disponível para desafios em Backend, Integrações &amp; Dados</span>
+            </div>
+
+            <h1 class="hero-name">
+              <span data-i18n="hero.greeting">Olá, eu sou</span><br />
+              <span class="gradient-text">Thauan Matheus</span>
+            </h1>
+
+            <div class="hero-typing-wrap" aria-live="polite">
+              <span class="typing-prefix" data-i18n="hero.typingPrefix">&gt;</span>
+              <span id="typing-text">Integrações &amp; Open Finance</span>
+              <span class="typing-cursor" aria-hidden="true"></span>
+            </div>
+
+            <p class="hero-pitch" data-i18n="hero.pitch">
+              Profissional com 5+ anos em tecnologia (suporte técnico, implantação Azure, QA e desenvolvimento), sendo ~1,5 ano construindo automações, integrações via API e protótipos de dados em fintech contábil.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-primary magnetic-btn" data-i18n="hero.ctaProjects">Ver Projetos</a>
+              <a href="#sobre" class="btn btn-secondary" data-i18n="hero.ctaAbout">Sobre Mim</a>
+              <a href="https://github.com/TawanMd" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/thauan-matheus-martins-dutra-433a02213/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-icon" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Terminal -->
+          <div class="terminal-card reveal reveal-right is-visible" style="--delay: 120ms;">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <div class="terminal-tabs" role="tablist" aria-label="Snippets do perfil">
+                <button type="button" class="terminal-tab active" data-tab="profile">profile.json</button>
+                <button type="button" class="terminal-tab" data-tab="stack">stack.ts</button>
+                <button type="button" class="terminal-tab" data-tab="http">open-finance.http</button>
+              </div>
+              <div class="terminal-header-actions">
+                <button type="button" id="run-code-btn" class="run-code-btn">▶ Executar</button>
+                <button type="button" id="copy-code-btn" class="copy-code-btn">Copiar</button>
+              </div>
+            </div>
+            <div class="terminal-body">
+              <pre><code id="terminal-code"></code></pre>
+              <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+            </div>
+            <div class="terminal-status-bar">
+              <span class="status-indicator" id="terminal-status-badge">
+                <span class="status-dot"></span>
+                <span id="terminal-status-text">READY · idle</span>
+              </span>
+              <span class="mono" id="terminal-latency">UTF-8 · JSON/REST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Strip -->
+        <div class="kpi-strip reveal reveal-up is-visible" style="--delay: 180ms;">
+          <div class="kpi-card spotlight-card">
+            <div class="kpi-value" data-count="5" data-suffix="+">5+</div>
+            <div class="kpi-label" data-i18n="hero.kpiYears">Anos em Tecnologia</div>
+          </div>
+          <div class="kpi-card spotlight-card">
+            <div class="kpi-value" data-count="100" data-prefix="+" data-suffix="%">+100%</div>
+            <div class="kpi-label" data-i18n="hero.kpiSpeed">Velocidade no Validador Contábil</div>
+          </div>
+          <div class="kpi-card spotlight-card">
+            <div class="kpi-value" data-count="6" data-suffix="+">6+</div>
+            <div class="kpi-label" data-i18n="hero.kpiProjects">Projetos &amp; Automações Reais</div>
+          </div>
+          <div class="kpi-card spotlight-card">
+            <div class="kpi-value">C1</div>
+            <div class="kpi-label" data-i18n="hero.kpiEnglish">Inglês Avançado (EF SET)</div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
     <!-- Sobre -->
-    <section id="about" class="about max-width">
-      <div class="about__left">
-        <h2 class="secondary-title">Quem sou eu?</h2>
-        <p>
-          Que tal se conectar comigo no Linkedin para que eu lhe apresente melhor meu trabalho?
-        </p>
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/tawanzin_/"><img src="assets/instagram.svg" alt="Instagram" /></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/thauan-matheus-martins-dutra-433a02213/"><img src="assets/linkedin.svg" alt="Linkedin" /></a>
-          </li>
-          <li>
-          </li>
-        </ul>
-      </div>
-      <div class="about__right">
-        <h3 class="tertiary-title mb-m">
-          Profissional de TI apaixonado por Tecnologia.
-        </h3>
-        <p>
-          Olá, eu sou Thauan Matheus, um profissional de TI apaixonado por
-          tecnologia e soluções criativas. Com mais de 3 anos de experiência na área,
-          tenho trabalhado com diversas tecnologias e
-          plataformas para criar soluções confiáveis que atendam às
-          necessidades dos clientes.
-        </p>
-        <p>
-          Eu amo o desafio de encontrar soluções inovadoras e criativas para
-          problemas complexos e estou sempre buscando aprender e crescer como
-          profissional.
-        </p>
-      </div>
-    </section>
-
-    <!-- habilidades -->
-    <section id="skills" class="skills">
-      <div class="skills__content max-width">
-        <h2 class="tertiary-title">Minhas tecnologias</h2>
-        <p class="description">
-          Descubra as habilidades e ferramentas que domino e que me permitem
-          criar soluções criativas e funcionais para meus clientes.
-        </p>
-        <ul>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/notebook.png" alt="CS50P" />
-            </div>
-            <h3>Habilidade em Código</h3>
-            <p>
-              Curso de harvard de Python em andamento, término previsto para 2025!
-              O curso está refornçando meus fundamentos em python, JS, HTML e CSS, SQL e outras tecnologias!
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/analisando.png" alt="Análise de dados" />
-            </div>
-            <h3>Análise de dados</h3> 
-            <p>
-              Habilidade em análise de dados usando Excel, PowerBI para visualização, biblioteca Pandas de Python
-              e também SQL Server para gerenciamente de banco de dados e tratamento de dados.
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/phone.png" alt="Suporte" />
-            </div>
-            <h3>Suporte a usuários</h3>
-            <p>
-              Meus conhecimentos, experiência e cursos me tornaram um excenlente resolvedor de problemas.
-              Amo resolver problemas de clientes e usuários e sentir que fiz a diferença no momento de vida deles.
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/files.png" alt="Gerenciamentos de versões" />
-            </div>
-            <h3>Gerenciamentos de versões</h3>
-            <p>
-              Experiência em ferramentas de gerenciamento de versão para
-              controle de projetos como github actions e Azure Devops para versionamento de Código!
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projetos -->
-    <section id="projects" class="projects max-width">
-      <div class="projects__content">
-        <h2 class="secondary-title">Projetos em Destaque</h2>
-        <p>
-          De ideias abstratas a projetos bem feitos, aqui estão alguns dos
-          meus trabalhos mais recentes!
-        </p>
-      </div>
-      <ul>
-        <li>
-          <div class="image">
-            <img src="assets/projeto_lp.png" alt="Landing Page" />
-          </div>
-          <div class="projects__info">
-            <h3 class="tertiary-title">
-              Landing Page de Portfolio usando GitHub Pages
-            </h3>
-            <p>
-              Esta landing page que você está lendo agora. Para desenvolve-la, utilizei de Javascript, HTML e CSS para desenvolver um site responsivo e moderno!
-            </p>
-            <a href="https://github.com/TawanMd/TawanMd.github.io">Saiba mais sobre a LP aqui! &rarr;</a>
-          </div>
-        </li>
-        <li class="projects__reversed-list">
-          <div class="image">
-            <img src="assets/image.png" alt="ecommerce" />
-          </div>
-          <div class="projects__info">
-            <h3 class="tertiary-title">
-              Em andamento...
-            </h3>
-            <p>
-              Em andamento...
-            </p>
-            <a href="#">Em construção (em breve) &rarr;</a>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <img src="assets/image.png" alt="delivery" />
-          </div>
-          <div class="projects__info">
-            <h3 class="tertiary-title">
-              Em andamento...
-            </h3>
-            <p>
-              Em andamento...
-            </p>
-            <a href="#">Em construção (em breve) &rarr;</a>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="footer__content max-width mb-0">
-        <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
-        <p class="mb-m">
-          Ficarei feliz em saber mais sobre seu projeto e como posso ser uma peça valiosa para o seu time!
-        </p>
-        <div class="footer__contact mb-m">
-          <span class="mb-m">thauan.matheus40@gmail.com</span>
-          <span>48 98801-5140</span>
+    <section id="sobre" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <div class="section-eyebrow" data-i18n="about.eyebrow">01 · Sobre Mim</div>
+          <h2 class="section-title" data-i18n="about.title">Da investigação em produção à construção de integrações</h2>
+          <p class="section-desc" data-i18n="about.desc">Uno visão prática de regra de negócio contábil com entrega técnica em Python, Node.js, SQL e IA aplicada.</p>
         </div>
-        <ul class="mb-l">
-          <li>
-            <a href="#"><img src="assets/instagram.svg" alt="Instagram" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="assets/linkedin.svg" alt="Linkedin" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="assets/facebook.svg" alt="Facebook" /></a>
-          </li>
-        </ul>
-        <p class="footer__copyright">
-          © 2024 TawanMd. Todos os direitos reservados.
-        </p>
+
+        <div class="about-grid">
+          <aside class="spotlight-card about-profile-card reveal reveal-left">
+            <div class="avatar-ring">
+              <img
+                src="https://avatars.githubusercontent.com/u/112520474?v=4"
+                alt="Foto de perfil de Thauan Matheus"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="avatar-fallback" aria-hidden="true">TM</div>
+            </div>
+            <h3>Thauan Matheus Martins Dutra</h3>
+            <span class="inline-link" data-i18n="about.roleTag">Backend · Integrações &amp; Open Finance</span>
+            <div class="about-meta-badges">
+              <span class="meta-pill" data-i18n="about.locBadge">Florianópolis, SC</span>
+              <span class="meta-pill" data-i18n="about.adsBadge">ADS Concluído · Nov/2026</span>
+              <span class="meta-pill" data-i18n="about.cs50Badge">CS50P HarvardX</span>
+              <span class="meta-pill" data-i18n="about.enBadge">Inglês C1 · EF SET</span>
+            </div>
+          </aside>
+
+          <div class="about-story reveal reveal-right">
+            <p data-i18n="about.p1">
+              Minha base começou no suporte técnico e implantação de software SaaS e on-premise em Azure, lidando com SQL, Power BI e integrações REST/SOAP com ERPs como SAP e TOTVS.
+            </p>
+            <p data-i18n="about.p2">
+              Na Mister Contador (adquirida pela Conta Azul / Grupo Visma em jul/2026), passei por QA e Desenvolvimento Júnior até o Suporte Sênior — construindo ferramentas reais que eliminam trabalho manual em escritórios contábeis.
+            </p>
+            <div class="about-highlight" data-i18n="about.highlight">
+              Já validei um MVP de Open Finance via API da Pluggy com dados reais autorizados junto a um escritório parceiro, levando melhorias diretas para o produto.
+            </div>
+          </div>
+        </div>
+
+        <div id="pillars-grid" class="pillars-grid"></div>
       </div>
-    </footer>
-    <!-- script -->
-    <script src="scripts/index.js"></script>
-  </body>
+    </section>
+
+    <!-- Projetos (Carrossel) -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <div class="section-eyebrow" data-i18n="projects.eyebrow">02 · Portfólio Técnico</div>
+          <h2 class="section-title" data-i18n="projects.title">Projetos construídos para resolver dores reais</h2>
+          <p class="section-desc" data-i18n="projects.desc">Explore pelo carrossel, filtre por especialidade ou abra a arquitetura detalhada de cada entrega.</p>
+        </div>
+
+        <div class="projects-toolbar reveal reveal-up">
+          <div class="filter-group" role="group" aria-label="Filtrar projetos">
+            <button type="button" class="filter-btn active" data-filter="all" data-i18n="projects.filters.all">Todos</button>
+            <button type="button" class="filter-btn" data-filter="backend" data-i18n="projects.filters.backend">Open Finance &amp; Backend</button>
+            <button type="button" class="filter-btn" data-filter="ai" data-i18n="projects.filters.ai">IA &amp; Web</button>
+            <button type="button" class="filter-btn" data-filter="data" data-i18n="projects.filters.data">Dados &amp; Python</button>
+          </div>
+
+          <div class="carousel-controls">
+            <span id="carousel-counter" class="carousel-counter mono">01 / 06</span>
+            <button type="button" id="carousel-autoplay" class="carousel-arrow" aria-label="Pausar rotação automática" title="Play / Pause">
+              <svg id="autoplay-icon-pause" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              <svg id="autoplay-icon-play" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="6,4 20,12 6,20"/></svg>
+            </button>
+            <button type="button" id="carousel-prev" class="carousel-arrow magnetic-btn" aria-label="Projeto anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" id="carousel-next" class="carousel-arrow magnetic-btn" aria-label="Próximo projeto">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-progress-track" aria-hidden="true">
+          <div id="carousel-progress-fill" class="carousel-progress-fill"></div>
+        </div>
+
+        <div id="carousel-viewport" class="carousel-viewport reveal reveal-up" tabindex="0" aria-label="Carrossel de projetos">
+          <div id="carousel-track" class="carousel-track"></div>
+        </div>
+
+        <div id="carousel-dots" class="carousel-dots" aria-label="Indicadores do carrossel"></div>
+
+        <div class="other-projects reveal reveal-up">
+          <h3 data-i18n="projects.otherTitle">Outros Projetos &amp; Provas de Conceito (POCs)</h3>
+          <div id="other-projects-grid" class="other-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <div class="section-eyebrow" data-i18n="stack.eyebrow">03 · Stack &amp; Competências</div>
+          <h2 class="section-title" data-i18n="stack.title">Ferramentas organizadas por domínio técnico</h2>
+          <p class="section-desc" data-i18n="stack.desc">Foco em backend, integração confiável de APIs, bancos relacionais e IA aplicada — sem dispersão.</p>
+        </div>
+
+        <div class="marquee-wrap reveal reveal-up" aria-hidden="true">
+          <div class="marquee-track">
+            <span class="marquee-chip">Python</span>
+            <span class="marquee-chip">Node.js</span>
+            <span class="marquee-chip">PostgreSQL</span>
+            <span class="marquee-chip">Open Finance (Pluggy)</span>
+            <span class="marquee-chip">REST APIs</span>
+            <span class="marquee-chip">Docker</span>
+            <span class="marquee-chip">Flask &amp; Express</span>
+            <span class="marquee-chip">Gemini API</span>
+            <span class="marquee-chip">Apache Superset</span>
+            <span class="marquee-chip">Azure DevOps</span>
+            <span class="marquee-chip">pytest &amp; Cypress</span>
+            <span class="marquee-chip">Python</span>
+            <span class="marquee-chip">Node.js</span>
+            <span class="marquee-chip">PostgreSQL</span>
+            <span class="marquee-chip">Open Finance (Pluggy)</span>
+            <span class="marquee-chip">REST APIs</span>
+            <span class="marquee-chip">Docker</span>
+            <span class="marquee-chip">Flask &amp; Express</span>
+            <span class="marquee-chip">Gemini API</span>
+            <span class="marquee-chip">Apache Superset</span>
+            <span class="marquee-chip">Azure DevOps</span>
+            <span class="marquee-chip">pytest &amp; Cypress</span>
+          </div>
+        </div>
+
+        <div id="stack-grid" class="stack-grid"></div>
+      </div>
+    </section>
+
+    <!-- Trajetória -->
+    <section id="trajetoria" class="section">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <div class="section-eyebrow" data-i18n="journey.eyebrow">04 · Trajetória &amp; Formação</div>
+          <h2 class="section-title" data-i18n="journey.title">Evolução consistente até a engenharia de produto</h2>
+          <p class="section-desc" data-i18n="journey.desc">Mais de 5 anos em tecnologia, combinando vivência real com clientes B2B e entrega contínua de código.</p>
+        </div>
+
+        <div id="timeline-list" class="timeline"></div>
+
+        <div class="credentials-grid">
+          <article class="spotlight-card credential-card reveal reveal-up" style="--delay: 0ms;">
+            <h3 data-i18n="journey.eduTitle">Formação Acadêmica</h3>
+            <ul id="cred-edu" class="credential-list"></ul>
+          </article>
+          <article class="spotlight-card credential-card reveal reveal-up" style="--delay: 90ms;">
+            <h3 data-i18n="journey.certTitle">Certificações</h3>
+            <ul id="cred-cert" class="credential-list"></ul>
+          </article>
+          <article class="spotlight-card credential-card reveal reveal-up" style="--delay: 180ms;">
+            <h3 data-i18n="journey.langTitle">Idiomas</h3>
+            <ul id="cred-lang" class="credential-list"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section section-alt">
+      <div class="container">
+        <div class="contact-box reveal reveal-up">
+          <div class="section-eyebrow" data-i18n="contact.eyebrow">05 · Contato</div>
+          <h2 data-i18n="contact.title">Vamos construir integrações sólidas juntos?</h2>
+          <p data-i18n="contact.desc">
+            Aberto a conversas sobre Backend, Engenharia de Integrações, Open Finance e Dados — no Brasil ou em times remotos internacionais.
+          </p>
+          <div class="contact-actions">
+            <a id="whatsapp-contact-btn" href="https://wa.me/5548988015140" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp magnetic-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.94 9.94 0 0 0-8.49 15.13L2 22l5.02-1.51A9.95 9.95 0 1 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.3-4.99-4.35-5.14-4.55-.15-.2-1.22-1.63-1.22-3.1 0-1.48.77-2.2 1.05-2.5.27-.3.6-.38.8-.38h.57c.18 0 .43-.07.67.51.24.59.84 2.04.91 2.19.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.53-.15.15-.31.31-.13.61.18.3.8 1.31 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.48.13.66-.07.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.08.13.08.73-.17 1.41Z"/></svg>
+              <span data-i18n="contact.whatsappBtn">WhatsApp</span>
+            </a>
+            <button type="button" id="copy-email-btn" class="btn btn-primary magnetic-btn" data-i18n="contact.copyEmail">Copiar E-mail</button>
+            <a href="mailto:thauan.matheus40@gmail.com" class="btn btn-secondary" data-i18n="contact.sendEmail">Enviar E-mail</a>
+            <a href="https://www.linkedin.com/in/thauan-matheus-martins-dutra-433a02213/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+            <a href="https://github.com/TawanMd" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span data-i18n="contact.footerText">Desenvolvido por Thauan Matheus · Florianópolis, SC</span>
+      <span class="mono">github.com/TawanMd · Ctrl+K</span>
+    </div>
+  </footer>
+
+  <!-- Modal de Arquitetura -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button type="button" id="modal-close" class="modal-close" aria-label="Fechar modal">✕</button>
+      <div id="modal-category" class="modal-category"></div>
+      <h3 id="modal-title" class="modal-title"></h3>
+
+      <div class="modal-section">
+        <h4 id="modal-problem-title">Problema</h4>
+        <p id="modal-problem"></p>
+      </div>
+      <div class="modal-section">
+        <h4 id="modal-solution-title">Solução</h4>
+        <p id="modal-solution"></p>
+      </div>
+      <div class="modal-section">
+        <h4 id="modal-arch-title">Arquitetura &amp; Stack</h4>
+        <p id="modal-arch"></p>
+      </div>
+      <div class="modal-section">
+        <h4 id="modal-impact-title">Impacto Real</h4>
+        <p id="modal-impact"></p>
+      </div>
+
+      <div id="modal-tags" class="tag-row"></div>
+      <div id="modal-links" class="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Command Palette (Ctrl+K) -->
+  <div id="cmd-palette" class="modal-backdrop cmd-backdrop" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
+    <div class="cmd-dialog">
+      <div class="cmd-input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" placeholder="Buscar seção, projeto ou ação..." />
+        <button type="button" id="cmd-close" class="cmd-esc">ESC</button>
+      </div>
+      <ul id="cmd-list" class="cmd-list" role="listbox"></ul>
+      <div class="cmd-footer">
+        <span id="cmd-help">↑↓ navegar · Enter executar · Esc fechar</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <a id="whatsapp-float" href="https://wa.me/5548988015140" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Conversar no WhatsApp" data-tooltip="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.94 9.94 0 0 0-8.49 15.13L2 22l5.02-1.51A9.95 9.95 0 1 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.3-4.99-4.35-5.14-4.55-.15-.2-1.22-1.63-1.22-3.1 0-1.48.77-2.2 1.05-2.5.27-.3.6-.38.8-.38h.57c.18 0 .43-.07.67.51.24.59.84 2.04.91 2.19.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.53-.15.15-.31.31-.13.61.18.3.8 1.31 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.48.13.66-.07.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.08.13.08.73-.17 1.41Z"/></svg>
+  </a>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
